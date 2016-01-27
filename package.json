@@ -1,5 +1,6 @@
 {
   "name": "ReactNativeAdjustSdk",
   "version": "0.0.1",
-  "keywords": "react-native"
+  "keywords": "react-native",
+  "main": "ReactNativeAdjustSdk.ios.js"
 }

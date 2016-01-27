@@ -6,18 +6,20 @@
 type AdjustConfig = {appToken: string; environment: string; logLevel: string;}
 type AdjustEvent = {token: string;};
 
-var NativeReactNativeAdjustSdk = require('NativeModules').ReactNativeAdjustSdk;
+var NativeReactNativeAdjustSdk = require('react-native').NativeModules.ReactNativeAdjustSdk;
+
+export const AdjustEnvironmentSandbox = 'sandbox';
+export const AdjustEnvironmentProduction = 'production';
 
 /**
  * High-level docs for the ReactNativeAdjustSdk iOS API can be written here.
  */
 
-var ReactNativeAdjustSdk = {
-    trackEvent: function (event:AdjustEvent) {
+export var ReactNativeAdjustSdk = {
+    trackEvent(event:AdjustEvent) {
     },
-    init: function (config:AdjustConfig) {
+
+    init(config:AdjustConfig) {
         NativeReactNativeAdjustSdk.initialize(config);
     }
-};
-
-module.exports = ReactNativeAdjustSdk;
+}
