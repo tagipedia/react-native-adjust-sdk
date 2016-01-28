@@ -29,4 +29,9 @@ RCT_EXPORT_METHOD(initialize: (NSDictionary *) config)
     [Adjust appDidLaunch:adjustConfig];
 }
 
+RCT_EXPORT_METHOD(trackEvent:(NSDictionary*) eventDict)
+{
+    ADJEvent * event = [ADJEvent eventWithEventToken:[eventDict valueForKey:@"token"]];
+    [Adjust trackEvent:event];
+}
 @end

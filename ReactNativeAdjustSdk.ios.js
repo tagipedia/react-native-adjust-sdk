@@ -1,5 +1,4 @@
 /**
- * @providesModule ReactNativeAdjustSdk
  * @flow
  */
 'use strict';
@@ -11,12 +10,16 @@ var NativeReactNativeAdjustSdk = require('react-native').NativeModules.ReactNati
 export const AdjustEnvironmentSandbox = 'sandbox';
 export const AdjustEnvironmentProduction = 'production';
 
-/**
- * High-level docs for the ReactNativeAdjustSdk iOS API can be written here.
- */
+export const AdjustEnvironmentLogLevelVerbose = 'verbose';
+export const AdjustEnvironmentLogLevelDebug = 'debug';
+export const AdjustEnvironmentLogLevelInfo = 'info';
+export const AdjustEnvironmentLogLevelWarn = 'warn';
+export const AdjustEnvironmentLogLevelError = 'error';
+export const AdjustEnvironmentLogLevelAssert = 'assert';
 
-export var ReactNativeAdjustSdk = {
+export var Adjust = {
     trackEvent(event:AdjustEvent) {
+        NativeReactNativeAdjustSdk.trackEvent(event);
     },
 
     init(config:AdjustConfig) {
