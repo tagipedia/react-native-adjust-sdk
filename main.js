@@ -25,4 +25,4 @@ export var Adjust = {
     init(config:AdjustConfig) {
         NativeReactNativeAdjustSdk.initialize(config);
     }
-}
+};
