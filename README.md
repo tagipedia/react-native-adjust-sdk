@@ -41,4 +41,4 @@ Adjust.init({appToken: 'YOURAPPTOKEN', environment: AdjustEnvironmentSandbox});
 
 The earlier you put it in the code the better. Before the initialization no events/installs are sent to Adjust.
 
-You have to switch from AdjustEnvironmentSandbox to AdjustEnvironmentProduction when releasing your app to production (the log output will remind you).
+**Important:** You have to switch from AdjustEnvironmentSandbox to AdjustEnvironmentProduction when releasing your app to production (the log output will remind you).
