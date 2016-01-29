@@ -1,6 +1,6 @@
 # Installation Android
-1. npm install ... --save
-2. rnpm link
+1. `npm install https://github.com/dbasedow/react-native-adjust-sdk.git --save`
+2. `rnpm link`
 3. open your project's MainActivity.java and add ReactNativeAdjustSdk to the list in the getPackages method:
 ```java
     protected List<ReactPackage> getPackages() {
