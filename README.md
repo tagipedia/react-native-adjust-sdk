@@ -39,6 +39,11 @@ import {Adjust, AdjustEnvironmentSandbox} from 'ReactNativeAdjustSdk';
 Adjust.init({appToken: 'YOURAPPTOKEN', environment: AdjustEnvironmentSandbox});
 ```
 
+# Tracking Events
+```javascript
+Adjust.trackEvent({token: 'EVENTTOKEN'});
+```
+
 The earlier you put it in the code the better. Before the initialization no events/installs are sent to Adjust.
 
 **Important:** You have to switch from AdjustEnvironmentSandbox to AdjustEnvironmentProduction when releasing your app to production (the log output will remind you).
