@@ -3,6 +3,7 @@ package de.danielbasedow.reactnativeadjustsdk;
 import com.adjust.sdk.Adjust;
 import com.adjust.sdk.AdjustConfig;
 import com.adjust.sdk.AdjustEvent;
+import com.adjust.sdk.LogLevel;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -23,6 +24,9 @@ public class AdjustManager extends ReactContextBaseJavaModule {
         String token = config.getString("appToken");
         String environment = config.getString("environment");
         AdjustConfig cfg = new AdjustConfig(this.getReactApplicationContext(), token, environment);
+        if (config.hasKey("logLevel") && !config.isNull("logLevel")) {
+            cfg.setLogLevel(LogLevel.valueOf(config.getString("logLevel").toUpperCase()));
+        }
         Adjust.onCreate(cfg);
     }
 
